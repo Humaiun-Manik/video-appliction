@@ -1,19 +1,20 @@
 import React from "react";
-
-export default function LikeUnlike() {
+import like from "./../../assets/like.svg";
+import unLike from "./../../assets/unlike.svg";
+export default function LikeUnlike({ likes, unlikes }) {
   return (
-    <div class="flex gap-10 w-48">
-      <div class="flex gap-1">
-        <div class="shrink-0">
-          <img class="w-5 block" src="./assets/like.svg" alt="Like" />
+    <div className="flex gap-10 w-48">
+      <div className="flex gap-1">
+        <div className="shrink-0">
+          <img className="w-5 block" src={like} alt="Like" />
         </div>
-        <div class="text-sm leading-[1.7142857] text-slate-600">100K</div>
+        <div className="text-sm leading-[1.7142857] text-slate-600">{likes}</div>
       </div>
-      <div class="flex gap-1">
-        <div class="shrink-0">
-          <img class="w-5 block" src="./assets/unlike.svg" alt="Unlike" />
+      <div className="flex gap-1">
+        <div className="shrink-0">
+          <img className="w-5 block" src={unLike} alt="Unlike" />
         </div>
-        <div class="text-sm leading-[1.7142857] text-slate-600">100K</div>
+        <div className="text-sm leading-[1.7142857] text-slate-600">{unlikes}</div>
       </div>
     </div>
   );
